@@ -1,4 +1,6 @@
-#[deriving(FromPrimitive)]
+use std::num::FromPrimitive;
+
+#[derive(FromPrimitive)]
 pub enum Instruction {
 	INTEGER = 0x00,
 	STRING = 0x01,
