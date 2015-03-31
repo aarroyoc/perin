@@ -1,3 +1,4 @@
+#![feature(core)]
 mod vm;
 
 fn main(){
