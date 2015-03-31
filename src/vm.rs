@@ -45,13 +45,13 @@ impl PerinVM{
 							self.push=true;
 						},
 						Instruction::ADD => {
-							let a=self.pop() as int;
-							let b=self.pop() as int;
+							let a=self.pop() as i32;
+							let b=self.pop() as i32;
 							let c=a+b;
 							self.push(c as u8);
 						},
 						Instruction::SHOWINTEGER => {
-							println!("Integer value {}",self.pop() as int);
+							println!("Integer value {}",self.pop() as i32);
 						},
 						Instruction::SHOWVERSION => {
 							println!("PerinVM v0.1.0");
