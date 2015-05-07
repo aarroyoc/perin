@@ -1,6 +1,9 @@
-use std::num::FromPrimitive;
+#[macro_use] extern crate enum_primitive;
+extern crate num;
+use num::FromPrimitive;
 
-#[derive(FromPrimitive)]
+
+enum_from_primitive!{
 pub enum Instruction {
 	INTEGER = 0x00,
 	STRING = 0x01,
@@ -8,6 +11,7 @@ pub enum Instruction {
 	SHOWINTEGER = 0x0A,
 	SHOWVERSION = 0x0E,
 	EXITVM = 0x0F
+}
 }
 
 pub fn perin_version() -> f32{
@@ -34,7 +38,7 @@ impl PerinVM{
 			self.push(execbyte);
 			self.push=false;
 		}else{
-			let op: Option<Instruction> = FromPrimitive::from_u8(execbyte);
+			let op: Option<Instruction> = Instruction::from_u8(execbyte);
 			match op{
 				None => {
 					println!("Unknown instruction, skipping...");

@@ -3,3 +3,7 @@
 name = "perin"
 version = "0.1.0"
 authors = ["Adrián Arroyo Calle"]
+
+[dependencies]
+enum_primitive = "0.0.2"
+
