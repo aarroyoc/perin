@@ -1,4 +1,5 @@
-#![feature(core)]
+#[macro_use] extern crate enum_primitive;
+extern crate num;
 mod vm;
 
 fn main(){

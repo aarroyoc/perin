@@ -2,12 +2,13 @@
 name = "perin"
 version = "0.1.0"
 dependencies = [
- "enum_primitive 0.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "enum_primitive 0.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num 0.1.24 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "enum_primitive"
-version = "0.0.1"
+version = "0.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "num 0.1.24 (registry+https://github.com/rust-lang/crates.io-index)",
